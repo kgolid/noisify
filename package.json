@@ -1,0 +1,22 @@
+{
+  "name": "dither",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "chromotome": "^1.2.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-commonjs": "^9.2.0"
+  }
+}
