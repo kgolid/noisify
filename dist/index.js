@@ -13,14 +13,14 @@
       const c = p.createCanvas(1200, 800);
       p.pixelDensity(1);
       p.noLoop();
-      p.fill(255);
-      p.textSize(21);
-      p.textAlign(p.CENTER);
 
       c.drop(gotFile);
     };
 
     p.draw = function() {
+      p.fill(255);
+      p.textSize(21);
+      p.textAlign(p.CENTER);
       p.background('#888');
       p.text('Drop an image here!', p.width / 2, p.height / 2);
     };
