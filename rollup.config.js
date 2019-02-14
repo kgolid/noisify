@@ -10,5 +10,13 @@ export default [
       format: 'umd'
     },
     plugins: [resolve(), commonjs()]
+  },
+  {
+    input: 'index-half.js',
+    output: {
+      file: pkg.browser_half,
+      format: 'umd'
+    },
+    plugins: [resolve(), commonjs()]
   }
 ];

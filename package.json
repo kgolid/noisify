@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "browser": "dist/index.js",
+  "browser_half": "dist/index-half.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w"
