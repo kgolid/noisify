@@ -18,5 +18,13 @@ export default [
       format: 'umd'
     },
     plugins: [resolve(), commonjs()]
+  },
+  {
+    input: 'index-print.js',
+    output: {
+      file: pkg.browser_print,
+      format: 'umd'
+    },
+    plugins: [resolve(), commonjs()]
   }
 ];
