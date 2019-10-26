@@ -5,6 +5,7 @@
   "browser": "dist/index.js",
   "browser_half": "dist/index-half.js",
   "browser_print": "dist/index-print.js",
+  "browser_partial": "dist/index-partial.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w"

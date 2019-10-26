@@ -26,5 +26,13 @@ export default [
       format: 'umd'
     },
     plugins: [resolve(), commonjs()]
+  },
+  {
+    input: 'index-partial.js',
+    output: {
+      file: pkg.browser_partial,
+      format: 'umd'
+    },
+    plugins: [resolve(), commonjs()]
   }
 ];
