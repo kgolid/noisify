@@ -69,8 +69,12 @@ let sketch = function(p) {
         let dy = p.noise(i / n_size2, j / n_size2, 400) * (ny / 20);
 
         let ratio = p.pow(
-          p.constrain(-0.9 + 2 * (portrait ? i / p.height : j / p.width), 0, 1),
-          2
+          p.constrain(
+            1.8 * (-0.45 + (portrait ? i / p.height : j / p.width)),
+            0,
+            1
+          ),
+          1.5
         );
         let c =
           pixels[p.floor(ratio * (cy + dy) + (1 - ratio) * i)][
