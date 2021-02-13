@@ -6,13 +6,13 @@
   const maxWidth = 5000;
   const maxHeight = 5000;
 
-  const n_size1 = 1200;
-  const n_size2 = 700;
+  const n_size1 = 1500;
+  const n_size2 = 1000;
 
-  let sketch = function(p) {
+  let sketch = function (p) {
     let nx, ny;
 
-    p.setup = function() {
+    p.setup = function () {
       const c = p.createCanvas(500, 300);
       p.pixelDensity(1);
       p.noLoop();
@@ -20,7 +20,7 @@
       c.drop(gotFile);
     };
 
-    p.draw = function() {
+    p.draw = function () {
       p.fill(255);
       p.textSize(21);
       p.textAlign(p.CENTER);
@@ -28,7 +28,7 @@
       p.text('Drop an image here!', p.width / 2, p.height / 2);
     };
 
-    p.keyPressed = function() {
+    p.keyPressed = function () {
       if (p.keyCode === 80) p.saveCanvas('noisify', 'jpeg');
     };
 
@@ -80,7 +80,8 @@
       let cy = p.noise(i / n_size1, j / n_size1, 200) * ny;
 
       let offset = p.noise(i / n_size2, j / n_size2, 500);
-      let ratio = offset < 0.4 ? 0 : p.constrain(p.pow(offset - 0.4, 2) * 4, 0, 1);
+      let ratio = offset < 0.5 ? 0 : p.constrain(p.pow(offset - 0.5, 2) * 5, 0, 1);
+      //let ratio = p.constrain(0.5 - p.pow(i / p.width + j / (p.width + 800), 2) * 2, 0, 1) * offset;
 
       let xpos = ratio * cy + (1 - ratio) * i;
       let ypos = ratio * cx + (1 - ratio) * j;
